@@ -22,7 +22,7 @@ const ChatWithAI = () => {  // ✅ component ke andar
 
   // ✅ API se real businesses fetch karo
   useEffect(() => {
-    fetch('http://localhost:8000/api/business/all-businesses', { credentials: 'include' })
+    fetch(`${import.meta.env.VITE_API_URL}/api/business/all-businesses`, { credentials: 'include' })
       .then(res => res.json())
       .then(data => setCompanies(data.businesses || []))
   }, [])

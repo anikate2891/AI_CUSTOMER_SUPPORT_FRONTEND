@@ -46,7 +46,7 @@ const InviteModal = ({ onClose }) => {
     setSending(true);
 
     try {
-      const res = await fetch('http://localhost:8000/api/business/invite-agent', {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/business/invite-agent`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         credentials: 'include',
